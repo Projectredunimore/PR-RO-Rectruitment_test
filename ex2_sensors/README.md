@@ -1,13 +1,13 @@
-## Esercizio 2 — Utilizzo di sensori o periferiche
+## Exercise 2 — Using sensors or peripherals
 
-Una parte fondamentale del lavoro di robotica consiste nell'utilizzo di sensori, periferiche, telecamere, ...
-Questo è un esercizio libero in cui dovrai scegliere un dispositivo da cui leggere dei dati e manipolarli, sotto sono presenti alcuni esempi di svolgimento ma l'esercizio può essere svolto a proprio piacimento.
-Si può svolgere l'esercizio sia in python che in C++, utilizzare la relativa cartella.
+A fundamental part of robotics work is using sensors, peripherals, cameras, ...
+This is an open-ended exercise in which you choose a device to read data from and then process that data. Some example tasks are listed below, but you are free to approach the exercise however you like.
+The exercise can be done in either Python or C++; use the corresponding folder.
 
- - **A: Implementazione di una telecamera:** Leggere dati da una webcam, e mostrarli a schermo, implementare in un file di configurazione o in un'interfaccia dei parametri per modificare l'immagine come ridimensionamento, cambio di tonalità, saturazione, luminosità, ...
+ - **A: Camera implementation:** Read data from a webcam and display it on screen. Implement, in a configuration file or in a user interface, parameters to modify the image, such as resizing, hue, saturation, brightness, ...
 
- - **B: Teleoperazione tramite tastiera o joystick:** Utilizzare una periferica per comandare un robot mobile, implementando i comandi di velocità su 3 assi (x, y, rotazione). Il comando di velocità viene salvato in un vettore e scritto a intervalli regolari nel terminale o mostrato in un'interfaccia.
+ - **B: Keyboard or joystick teleoperation:** Use a peripheral to drive a mobile robot, implementing velocity commands on 3 axes (x, y, rotation). The velocity command is stored in a vector and printed to the terminal at regular intervals or shown in a user interface.
 
- - **C: Rotazione di un gimball tramite mouse:** Utilizzare il proprio mouse per ottenere comandi di posizione dei 2 assi (roll, pitch) del gimball. Il comando di posizione viene salvato in un vettore e scritto a intervalli regolari nel terminale o mostrato in un'interfaccia.
+ - **C: Mouse-controlled gimbal rotation:** Use your mouse to generate position commands for the 2 axes (roll, pitch) of a gimbal. The position command is stored in a vector and printed to the terminal at regular intervals or shown in a user interface.
 
-Al termine dell'esercizio si crei un piccolo video dimostrativo del funzionamento (circa 15 secondi) e lo si alleghi all'interno di questa cartella.
+When you have finished the exercise, record a short demo video showing it working (about 15 seconds) and include it in this folder.

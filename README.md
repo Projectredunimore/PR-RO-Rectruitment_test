@@ -1,13 +1,13 @@
-# Test di ingresso ProjectRED
+# ProjectRED Entry Test
 
-Il test si sviluppa in 3 esercizi che servono a valutare il livello del candidato. Gli esercizi devono essere svolti in ordine e valutano, rispettivamente, le seguenti capacità:
-1. Utilizzo del linguaggio C++
-2. Lettura di dati da sensori o periferiche
-3. Utilizzo del framework ROS2
+The test consists of 3 exercises designed to assess the candidate's level. The exercises must be completed in order and assess, respectively, the following skills:
+1. Using the C++ language
+2. Reading data from sensors or peripherals
+3. Using the ROS2 framework
 
 
-# Consegna
+# Submission
 
-Per la consegna si alleghi a [questo form](link_form...) lo zip di questa cartella nella sua interezza.
+To submit, attach a zip of this entire folder to [this form](link_form...).
 
-Per il recruitment day di data **03 Ottobre 2026** la consegna è prevista entro il giorno **11 Ottobre 2026**.
+For the recruitment day of **3 October 2026**, the submission deadline is **11 October 2026**.

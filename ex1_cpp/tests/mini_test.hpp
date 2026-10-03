@@ -1,8 +1,8 @@
-// mini_test.hpp — micro framework di test header-only (nessuna dipendenza esterna).
-// NON modificare questo file.
+// mini_test.hpp — header-only micro test framework (no external dependencies).
+// DO NOT modify this file.
 //
-// Uso:
-//   TEST_CASE("nome del test") { CHECK(a == b); CHECK_NEAR(x, 1.0, 1e-9); }
+// Usage:
+//   TEST_CASE("test name") { CHECK(a == b); CHECK_NEAR(x, 1.0, 1e-9); }
 //   int main() { return mini_test::run_all(); }
 #pragma once
 
@@ -69,13 +69,13 @@ inline int run_all() {
             std::cout << "[  FAIL  ] " << t.name << "\n           " << f.message << "\n";
         } catch (const std::exception& e) {
             ++failed;
-            std::cout << "[  FAIL  ] " << t.name << "\n           eccezione inattesa: " << e.what() << "\n";
+            std::cout << "[  FAIL  ] " << t.name << "\n           unexpected exception: " << e.what() << "\n";
         } catch (...) {
             ++failed;
-            std::cout << "[  FAIL  ] " << t.name << "\n           eccezione sconosciuta\n";
+            std::cout << "[  FAIL  ] " << t.name << "\n           unknown exception\n";
         }
     }
-    std::cout << "\n" << passed << "/" << (passed + failed) << " test superati\n";
+    std::cout << "\n" << passed << "/" << (passed + failed) << " tests passed\n";
     return failed == 0 ? 0 : 1;
 }
 
@@ -90,15 +90,15 @@ inline int run_all() {
     static void MT_CONCAT(mt_test_fn_, __LINE__)()
 
 #define CHECK(cond) \
-    do { if (!(cond)) mini_test::fail("CHECK(" #cond ") fallito", __FILE__, __LINE__); } while (0)
+    do { if (!(cond)) mini_test::fail("CHECK(" #cond ") failed", __FILE__, __LINE__); } while (0)
 
 #define CHECK_EQ(actual, expected)                                                               \
     do {                                                                                         \
         const auto& mt_a = (actual);                                                             \
         const auto& mt_e = (expected);                                                           \
         if (!(mt_a == mt_e))                                                                     \
-            mini_test::fail("CHECK_EQ(" #actual ", " #expected ")\n           ottenuto: " +      \
-                                mini_test::to_str(mt_a) + "\n           atteso:   " +            \
+            mini_test::fail("CHECK_EQ(" #actual ", " #expected ")\n           actual:   " +      \
+                                mini_test::to_str(mt_a) + "\n           expected: " +            \
                                 mini_test::to_str(mt_e), __FILE__, __LINE__);                    \
     } while (0)
 
@@ -106,8 +106,8 @@ inline int run_all() {
     do {                                                                                         \
         const double mt_a = (actual), mt_e = (expected);                                         \
         if (!(std::fabs(mt_a - mt_e) <= (tol)))                                                  \
-            mini_test::fail("CHECK_NEAR(" #actual ", " #expected ") ottenuto " +                 \
-                                mini_test::to_str(mt_a) + ", atteso " + mini_test::to_str(mt_e), \
+            mini_test::fail("CHECK_NEAR(" #actual ", " #expected ") got " +                      \
+                                mini_test::to_str(mt_a) + ", expected " + mini_test::to_str(mt_e), \
                             __FILE__, __LINE__);                                                 \
     } while (0)
 
@@ -119,8 +119,8 @@ inline int run_all() {
         for (std::size_t mt_i = 0; mt_ok && mt_i < mt_a.size(); ++mt_i)                          \
             mt_ok = std::fabs(mt_a[mt_i] - mt_e[mt_i]) <= (tol);                                 \
         if (!mt_ok)                                                                              \
-            mini_test::fail("CHECK_VEC_NEAR(" #actual ", " #expected ")\n           ottenuto: " + \
-                                mini_test::to_str(mt_a) + "\n           atteso:   " +            \
+            mini_test::fail("CHECK_VEC_NEAR(" #actual ", " #expected ")\n           actual:   " + \
+                                mini_test::to_str(mt_a) + "\n           expected: " +            \
                                 mini_test::to_str(mt_e), __FILE__, __LINE__);                    \
     } while (0)
 
@@ -129,6 +129,6 @@ inline int run_all() {
         bool mt_thrown = false;                                                                  \
         try { (void)(expr); } catch (const ExceptionType&) { mt_thrown = true; }                 \
         if (!mt_thrown)                                                                          \
-            mini_test::fail("CHECK_THROWS_AS(" #expr ", " #ExceptionType "): nessuna eccezione " \
-                            "del tipo atteso", __FILE__, __LINE__);                              \
+            mini_test::fail("CHECK_THROWS_AS(" #expr ", " #ExceptionType "): no exception "      \
+                            "of the expected type", __FILE__, __LINE__);                         \
     } while (0)

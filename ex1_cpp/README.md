@@ -1,17 +1,15 @@
-# Esercizio 1 — Telemetria della batteria (C++)
+# Exercise 1 — Battery telemetry (C++)
 
 
-Il rover registra la tensione della batteria a intervalli regolari in un `std::vector<double>`. Implementa in `src/telemetry.cpp` le tre funzioni dichiarate in `include/telemetry.hpp` (le specifiche complete sono nei commenti dell'header):
+The rover logs the battery voltage at regular intervals in a `std::vector<double>`. Implement in `src/telemetry.cpp` the three functions declared in `include/telemetry.hpp` (the full specifications are in the header comments):
 
-Implementare nel file `src/telemetry.cpp` i seguenti metodi:
+- **A. `movingAverage(samples, window)`** returns the moving average over windows of `window` consecutive samples (the result has `samples.size() - window + 1` elements) and throws `std::invalid_argument` if `window == 0` or `window > samples.size()`.
+- **B. `longestRunAbove(samples, threshold)`** returns the length of the longest run of consecutive samples **strictly** greater than `threshold`.
+- **C. `findDrops(samples, minDrop)`** returns the indices `i ≥ 1` where `samples[i-1] - samples[i] >= minDrop` and throws `std::invalid_argument` if `minDrop <= 0`.
 
-- **A. `movingAverage(samples, window)`** restituisce la media mobile su finestre di `window` campioni consecutivi (il risultato ha `samples.size() - window + 1` elementi) e lancia `std::invalid_argument` se `window == 0` o `window > samples.size()`.
-- **B. `longestRunAbove(samples, threshold)`** restituisce la lunghezza della più lunga sequenza di campioni consecutivi **strettamente** maggiori di `threshold`.
-- **C. `findDrops(samples, minDrop)`** restituisce gli indici `i ≥ 1` in cui `samples[i-1] - samples[i] >= minDrop` e lancia `std::invalid_argument` se `minDrop <= 0`.
+**Use the standard library only.**
 
-**Usa solo la libreria standard.**
-
-Per compilare ed eseguire i test eseguire i seguenti comandi all'interno della cartella che contiene questo file:
+To build and run the tests, run the following commands from the folder that contains this file:
 
 ```bash
 cmake -S . -B build && cmake --build build

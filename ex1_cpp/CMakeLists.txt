@@ -23,7 +23,7 @@ target_include_directories(test_public PRIVATE tests)
 target_link_libraries(test_public PRIVATE telemetry)
 add_test(NAME test_public COMMAND test_public)
 
-# I valutatori copiano qui i test nascosti: se il file esiste viene compilato automaticamente.
+# Evaluators copy the hidden tests here: if the file exists, it is built automatically.
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_hidden.cpp)
   add_executable(test_hidden tests/test_hidden.cpp)
   target_include_directories(test_hidden PRIVATE tests)
