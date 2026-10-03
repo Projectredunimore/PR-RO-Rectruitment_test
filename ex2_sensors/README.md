@@ -10,4 +10,4 @@ Si può svolgere l'esercizio sia in python che in C++, utilizzare la relativa ca
 
  - **C: Rotazione di un gimball tramite mouse:** Utilizzare il proprio mouse per ottenere comandi di posizione dei 2 assi (roll, pitch) del gimball. Il comando di posizione viene salvato in un vettore e scritto a intervalli regolari nel terminale o mostrato in un'interfaccia.
 
-Al termine dell'esercizio si crei un piccolo video dimostrativo del funzionamento e lo si alleghi all'interno di questa cartella.
+Al termine dell'esercizio si crei un piccolo video dimostrativo del funzionamento (circa 15 secondi) e lo si alleghi all'interno di questa cartella.
