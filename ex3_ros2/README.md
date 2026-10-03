@@ -16,7 +16,7 @@ L'esercizio consiste nell'utilizzare i dati del sensore implementato nell'eserci
 
  - **C: Rotazione di un gimball tramite mouse:** Utilizzare il proprio mouse per ottenere comandi di posizione dei 2 assi (roll, pitch) del gimball, il comando viene pubblicato su un topic e utilizzato da un nodo che tramite un controllore PID calcola i comandi di velocità da inviare ai motori (per la chiusura dell'anello in retroazione si possono assumere motori ideali, cioè che tra un comando di velocità e l'altro avranno percorso esattamente `dt * vel_cmd`).
 
-Al termine dell'esercizio si crei un piccolo video dimostrativo del funzionamento e lo si alleghi all'interno di questa cartella.
+Al termine dell'esercizio si crei un piccolo video dimostrativo del funzionamento (circa 15 secondi) e lo si alleghi all'interno di questa cartella.
 
 ### Suggerimenti
 
