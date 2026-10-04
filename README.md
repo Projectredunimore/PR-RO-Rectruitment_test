@@ -9,6 +9,6 @@ Per scaricare questo test clicca sul pulsante verde **Code** e poi su **Download
 
 # Consegna
 
-Per la consegna si alleghi a [questo form](https://forms.gle/VDVUvWdCX3GUS7Jf9) lo zip di questa cartella nella sua interezza.
+Per la consegna si alleghi a [questo form](https://forms.gle/VDVUvWdCX3GUS7Jf9) lo zip di questa cartella nella sua interezza nel formato `<nome>_<cognome>.zip`.
 
-Per il recruitment day di data **03 Ottobre 2026** la consegna è prevista entro il giorno **13 Ottobre 2026**.
+Per il recruitment day di data **03 Ottobre 2026** la consegna è prevista entro il giorno **15 Ottobre 2026**.
