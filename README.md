@@ -8,6 +8,6 @@ The test consists of 3 exercises designed to assess the candidate's level. The e
 
 # Submission
 
-To submit, attach a zip of this entire folder to [this form](link_form...).
+To submit, attach a zip of this entire folder to [this form](https://forms.gle/VDVUvWdCX3GUS7Jf9).
 
-For the recruitment day of **3 October 2026**, the submission deadline is **11 October 2026**.
+For the recruitment day of **3 October 2026**, the submission deadline is **13 October 2026**.
