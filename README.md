@@ -5,6 +5,7 @@ Il test si sviluppa in 3 esercizi che servono a valutare il livello del candidat
 2. Lettura di dati da sensori o periferiche
 3. Utilizzo del framework ROS2
 
+Per scaricare questo test clicca sul pulsante verde **Code** e poi su **Download ZIP**.
 
 # Consegna
 
